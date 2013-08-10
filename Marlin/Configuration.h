@@ -309,8 +309,9 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
 
 // default settings 
 // X, Y, Z, E steps per mm
+// These two lines represent different types of extruders.
 #ifdef REPRAPPRO_MENDEL
-#define DEFAULT_AXIS_STEPS_PER_UNIT {92.635, 92.635, 4000, 986.55}
+#define DEFAULT_AXIS_STEPS_PER_UNIT {92.635, 92.635, 4000, 991.55}
 #else
 #define DEFAULT_AXIS_STEPS_PER_UNIT   {92.635, 92.635, 4000, 660}
 #endif
