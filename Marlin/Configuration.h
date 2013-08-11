@@ -223,7 +223,7 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
 #define DISABLE_E false // For all extruders
 
 #ifdef REPRAPPRO_MENDEL
-#define AXES_MAX_LENGTHS {205, 180, 60}
+#define AXES_MAX_LENGTHS {210, 180, 60}
 #define INVERT_X_DIR true    // for Mendel set to false, for Orca set to true
 #define INVERT_Y_DIR false    // for Mendel set to true, for Orca set to false
 #define INVERT_Z_DIR false     // for Mendel set to false, for Orca set to true
@@ -263,7 +263,7 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
 #define max_software_endstops true  //If true, axis won't move to coordinates greater than the defined lengths below.
 
 // The position of the homing switches. Use MAX_LENGTH * -0.5 if the center should be 0, 0, 0
-#define X_HOME_POS -30.0
+#define X_HOME_POS -23.0
 #define Y_HOME_POS 0
 #define Z_HOME_POS 0
 
@@ -274,7 +274,7 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
 
 #define X_MAX_LENGTH 210  
 #define Y_MAX_LENGTH 180
-#define Z_MAX_LENGTH 140
+#define Z_MAX_LENGTH 60
 #define HOMING_FEEDRATE {10*60, 10*60, 1*60, 0}  // set the homing speeds (mm/min)
 #define FAST_HOME_FEEDRATE {50*60, 50*60, 1*60, 0}  // set the homing speeds (mm/min)
 #define DEFAULT_MAX_FEEDRATE          {300, 300, 3, 45}    // (mm/sec)    
