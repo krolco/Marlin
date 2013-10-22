@@ -1,4 +1,4 @@
-#ifndef CONFIGURATION_H
+ #ifndef CONFIGURATION_H
 #define CONFIGURATION_H
 
 // ==============================================================================
@@ -314,7 +314,9 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
 // This was for the orange PLA 1.79mm
 //#define DEFAULT_AXIS_STEPS_PER_UNIT {92.635, 92.635, 4000, 991.55}
 // This is for the white PLA 1.74mm
-#define DEFAULT_AXIS_STEPS_PER_UNIT {92.635, 92.635, 4000, 953.41}
+//#define DEFAULT_AXIS_STEPS_PER_UNIT {92.635, 92.635, 4000, 953.41}
+// After X-axis upgrade
+#define DEFAULT_AXIS_STEPS_PER_UNIT {93.6435, 92.635, 4000, 953.41}
 #else
 #define DEFAULT_AXIS_STEPS_PER_UNIT   {92.635, 92.635, 4000, 660}
 #endif
