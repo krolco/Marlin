@@ -171,7 +171,7 @@
 #define HEATER_1_MAXTEMP HEATER_MAXTEMP
 #define HEATER_2_MAXTEMP HEATER_MAXTEMP
 #endif
-#define BED_MAXTEMP 150
+#define BED_MAXTEMP 120
 
 
 // PID settings:
@@ -270,7 +270,7 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
 #define max_software_endstops true  //If true, axis won't move to coordinates greater than the defined lengths below.
 
 // The position of the homing switches. Use MAX_LENGTH * -0.5 if the center should be 0, 0, 0
-#define X_HOME_POS -25.0
+#define X_HOME_POS -45.0
 #define Y_HOME_POS 0
 #define Z_HOME_POS 0
 
