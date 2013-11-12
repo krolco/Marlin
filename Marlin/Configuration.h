@@ -230,7 +230,7 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
 #define DISABLE_E false // For all extruders
 
 #ifdef REPRAPPRO_MENDEL
-#define AXES_MAX_LENGTHS {210, 180, 80}
+#define AXES_MAX_LENGTHS {210, 180, 140}
 #define INVERT_X_DIR true    // for Mendel set to false, for Orca set to true
 #define INVERT_Y_DIR false    // for Mendel set to true, for Orca set to false
 #define INVERT_Z_DIR false     // for Mendel set to false, for Orca set to true
@@ -281,7 +281,7 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
 
 #define X_MAX_LENGTH 210  
 #define Y_MAX_LENGTH 180
-#define Z_MAX_LENGTH 80
+#define Z_MAX_LENGTH 140
 #define HOMING_FEEDRATE {10*60, 10*60, 1*60, 0}  // set the homing speeds (mm/min)
 #define FAST_HOME_FEEDRATE {50*60, 50*60, 1*60, 0}  // set the homing speeds (mm/min)
 #define DEFAULT_MAX_FEEDRATE          {300, 300, 3, 45}    // (mm/sec)    
@@ -323,7 +323,9 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
 // This is for the white PLA 1.74mm
 //#define DEFAULT_AXIS_STEPS_PER_UNIT {92.635, 92.635, 4000, 953.41}
 // After X-axis upgrade
-#define DEFAULT_AXIS_STEPS_PER_UNIT {93.6435, 92.635, 4000, 953.41}
+//#define DEFAULT_AXIS_STEPS_PER_UNIT {93.6435, 92.635, 4000, 953.41}
+// With new extruder drive
+#define DEFAULT_AXIS_STEPS_PER_UNIT {93.6435, 92.635, 4000, 674}
 #else
 #define DEFAULT_AXIS_STEPS_PER_UNIT   {92.635, 92.635, 4000, 660}
 #endif
