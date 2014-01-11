@@ -1,3 +1,4 @@
 *.o
 *.~
 applet/
+**/.DS_Store
