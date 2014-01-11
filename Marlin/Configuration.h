@@ -13,7 +13,7 @@
 //#define REPRAPPRO_MENDEL2 //Tricolour and Mono
 
 // Uncomment ONE of the next three lines - the one for your master controller electronics
-//#define REPRAPPRO_MELZI
+#define REPRAPPRO_MELZI
 //#define REPRAPPRO_SANGUINOLOLU
 //#define REPRAPPRO_DUE
 
@@ -21,8 +21,14 @@
 //#define SERIAL_R 4700
 #define SERIAL_R 10000
 
+//
+// These are adjustments for the 4700 ohm resistors on the slave board
+// Need to be sent.
+//M304 H2 B3960 R4700 T100000
+//M304 H3 B3960 R4700 T100000
+
 // Uncomment the next line if your machine has more than one extruder
-//#define REPRAPPRO_MULTIMATERIALS
+#define REPRAPPRO_MULTIMATERIALS
 
 
 
@@ -65,8 +71,8 @@
 #define STRING_CONFIG_H_AUTHOR "RepRapPro - AB" //Who made the changes.
 
 // This determines the communication speed of the printer
-#define BAUDRATE 250000
-//#define BAUDRATE 115200
+//#define BAUDRATE 250000
+#define BAUDRATE 115200
 
 //// The following define selects which electronics board you have. Please choose the one that matches your setup
 // Sanguinololu 1.2 and above = 62
@@ -325,7 +331,8 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
 // After X-axis upgrade
 //#define DEFAULT_AXIS_STEPS_PER_UNIT {93.6435, 92.635, 4000, 953.41}
 // With new extruder drive
-#define DEFAULT_AXIS_STEPS_PER_UNIT {93.6435, 92.635, 4000, 674}
+//#define DEFAULT_AXIS_STEPS_PER_UNIT {93.6435, 92.635, 4000, 674}
+#define DEFAULT_AXIS_STEPS_PER_UNIT {92.635, 91.43, 4000, 674}
 #else
 #define DEFAULT_AXIS_STEPS_PER_UNIT   {92.635, 92.635, 4000, 660}
 #endif
