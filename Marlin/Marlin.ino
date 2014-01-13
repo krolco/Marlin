@@ -1042,13 +1042,12 @@ void process_commands()
 	 card.removeFile(strchr_pointer + 4);
 	}
 	break;
-	
-    case 32: //M32 - fast SD transfer
-        card.fast_xfer(strchr_pointer+4);
-        break;
-    case 33: //M31 - high speed xfer capabilities
+    case 31: //M31 - high speed xfer capabilities
         SERIAL_ECHOPGM("RAW:");
         SERIAL_ECHOLN(SD_FAST_XFER_CHUNK_SIZE);
+        break;	
+    case 32: //M32 - fast SD transfer
+        card.fast_xfer(strchr_pointer+4);
         break;
 #endif //SDSUPPORT
 
