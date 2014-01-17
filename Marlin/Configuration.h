@@ -135,9 +135,7 @@
 #ifdef REPRAPPRO_MENDEL2
 // Rapid 61-0446 ; Semitec 103GT-2 All Mendels and Thermistors shipped after 1/4/13
  #define BED_BETA 4126.0
- #define BED_RS SERIAL_R
  #define BED_NTC 10000.0
- #define BED_R_INF ( BED_NTC*exp(-BED_BETA/298.15) )
 #endif
 
 
@@ -185,19 +183,16 @@
 #define PIDTEMP
 #define PID_MAX 255 // limits current to nozzle; 255=full current
 #define FULL_PID_BAND 150 // Full power is applied when pid_error[e] > FULL_PID_BAND
+
 #ifdef PIDTEMP
   //#define PID_DEBUG // Sends debug data to the serial port. 
   #define PID_INTEGRAL_DRIVE_MAX 125  //limit for the integral term
   #define K1 0.95 //smoothing factor withing the PID
   #define PID_dT 0.122 //sampling period of the PID
 
-
-// RepRapPro Huxley + Mendel
-    #define  DEFAULT_Kp 12.0
-    //#define  DEFAULT_Ki (2.2*PID_dT) // Time scaling now done in setPIDValues() in temperature.cpp - AB
-    //#define  DEFAULT_Kd (80/PID_dT)
-    #define  DEFAULT_Ki 2.2
-    #define  DEFAULT_Kd 80
+  #define DEFAULT_Kp 12.0
+  #define DEFAULT_Ki 2.2
+  #define DEFAULT_Kd 80
 
 #endif // PIDTEMP
 

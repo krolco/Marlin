@@ -398,9 +398,9 @@ void manage_heater()
           temp_iState[e] += pid_error[e];
           temp_iState[e] = constrain(temp_iState[e], temp_iState_min[e], temp_iState_max[e]);
           iTerm[e] = Ki * temp_iState[e];
+          
           //K1 defined in Configuration.h in the PID settings
-          #define K2 (1.0-K1)
-          dTerm[e] = (Kd * (pid_input - temp_dState[e]))*K2 + (K1 * dTerm[e]);
+          dTerm[e] = (Kd * (pid_input - temp_dState[e]))*(1.0-K1) + (K1 * dTerm[e]);
           temp_dState[e] = pid_input;
           pid_output = constrain(pTerm[e] + iTerm[e] - dTerm[e], 0, PID_MAX);
         }
