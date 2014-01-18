@@ -191,7 +191,7 @@
   #define PID_dT 0.122 //sampling period of the PID
 
   #define DEFAULT_Kp 12.0
-  #define DEFAULT_Ki 2.5
+  #define DEFAULT_Ki 2.2
   #define DEFAULT_Kd 80
 
 #endif // PIDTEMP
